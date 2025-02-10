@@ -1,4 +1,4 @@
-import { Card } from "./card";
+import { Card } from "./ui/card";
 
 export function ServerCard({ server, index, isStatic = false }) {
   const status = isStatic ? (index % 2 === 0 ? "Online" : "Offline") : "Online";
