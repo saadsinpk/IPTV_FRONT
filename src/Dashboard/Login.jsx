@@ -128,7 +128,8 @@ export default function Login() {
         {/* Right Section */}
         <div
           ref={heroRef}
-          className="hidden lg:flex flex-1 backdrop-blur-md bg-black/30 p-12 items-center border-l border-white/10"
+          // className="hidden lg:flex flex-1 backdrop-blur-md bg-black/30 p-12 items-center border-l border-white/10"
+          className="hidden  flex-1 backdrop-blur-md bg-black/30 p-12 items-center border-l border-white/10"
         >
           <div className="max-w-lg">
             <h1 className="text-3xl font-medium text-white mb-4">
