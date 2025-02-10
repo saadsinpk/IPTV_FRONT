@@ -32,6 +32,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
   };
 
   const handleLogout = () => {
+    console.log("logut karo");
     localStorage.removeItem("token");
     navigate("/");
   };
@@ -238,7 +239,13 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
             theme="#2d343c"
             mode="inline"
             selectedKeys={selectedKeys}
-            onClick={(e) => handleNavClick(e.key)}
+            onClick={(e) => {
+              if (e.key === "logout") {
+                handleLogout();
+              } else {
+                handleNavClick(e.key);
+              }
+            }}
           >
             {navItems.map((item) => {
               if (item.subItems) {

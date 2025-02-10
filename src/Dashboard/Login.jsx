@@ -70,7 +70,7 @@ export default function Login() {
     e.preventDefault();
     setIsLoading(true);
     localStorage.setItem("token", "test");
-    navigate("/dashboard");
+    navigate("/dashboard/statistic");
     setTimeout(() => {
       setIsLoading(false);
       setLocation("/");
