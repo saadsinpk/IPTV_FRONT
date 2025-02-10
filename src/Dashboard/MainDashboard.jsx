@@ -152,10 +152,10 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               height: 63,
               display: "flex",
               alignItems: "center",
-              color: "white",
+              color: "#7a7f83",
               fontSize: 20,
               width: "100%",
-              fontWeight: "bold",
+              // fontWeight: "bold",
               backgroundColor: "#1a2129",
               paddingLeft: "30px",
             }}
@@ -163,7 +163,8 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
             {/* {collapsed ? "🔹" : getTitleFromPath(location.pathname)} */}
             <IoMdMail color="#2d343c" size={30} />
             &nbsp;
-            {collapsed ? "🔹" : "Dashboard"}
+            <span style={{ color: "white", fontWeight: "bold" }}>D</span>
+            ASHBOARD / {/* Only "D" is white */}
           </div>
           <Menu
             theme="#2d343c"
