@@ -155,7 +155,6 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               color: "#7a7f83",
               fontSize: 20,
               width: "100%",
-              // fontWeight: "bold",
               backgroundColor: "#1a2129",
               paddingLeft: "30px",
             }}

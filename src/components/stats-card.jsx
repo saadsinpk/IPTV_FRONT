@@ -6,7 +6,7 @@ export function StatCard({ title, value, icon: Icon, className }) {
           <p className="text-sm opacity-90">{title}</p>
           <p className="text-3xl font-bold mt-1">{value}</p>
         </div>
-        <Icon className="h-6 w-6 opacity-80" />
+        {Icon && <Icon className="h-6 w-6 opacity-80" />}
       </div>
     </div>
   );
