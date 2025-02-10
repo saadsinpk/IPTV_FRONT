@@ -58,6 +58,26 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
         return "Dashboard / Movies";
       case "/dashboard/series":
         return "Dashboard / Series";
+      case "/dashboard/autobook":
+        return "Dashboard / Autobook";
+      case "/dashboard/bouquets":
+        return "Dashboard / Bouquets";
+      case "/dashboard/providers":
+        return "Dashboard / Providers";
+      case "/dashboard/transcodeprofiles":
+        return "Dashboard / TranscodeProfiles";
+      case "/dashboard/createdchannel":
+        return "Dashboard / CreatedChannel";
+      case "/dashboard/radio":
+        return "Dashboard / Radio";
+      case "/dashboard/folderwatch":
+        return "Dashboard / FolderWatch";
+      case "/dashboard/epg":
+        return "Dashboard / EPG";
+      case "/dashboard/archive":
+        return "Dashboard / Archive";
+      case "/dashboard/lines":
+        return "Dashboard / Lines";
       case "/dashboard/settings":
         return "Dashboard / Settings";
       default:
@@ -69,7 +89,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
     () => [
       {
         name: "Dashboard",
-        key: "/dashboard", // Update the key to "/dashboard"
+        key: "/dashboard",
         icon: <MdWindow />,
       },
       {
@@ -108,6 +128,56 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       {
         name: "Series",
         key: "/dashboard/series",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Autobook",
+        key: "/dashboard/autobook",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Bouquets",
+        key: "/dashboard/bouquets",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Providers",
+        key: "/dashboard/providers",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "TranscodeProfiles",
+        key: "/dashboard/transcodeprofiles",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "CreatedChannel",
+        key: "/dashboard/createdchannel",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Radio",
+        key: "/dashboard/radio",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "FolderWatch",
+        key: "/dashboard/folderwatch",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "EPG",
+        key: "/dashboard/epg",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Archive",
+        key: "/dashboard/archive",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Lines",
+        key: "/dashboard/lines",
         icon: <AppstoreOutlined />,
       },
       {
@@ -159,7 +229,6 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               paddingLeft: "30px",
             }}
           >
-            {/* {collapsed ? "🔹" : getTitleFromPath(location.pathname)} */}
             <IoMdMail color="#2d343c" size={30} />
             &nbsp;
             <span style={{ color: "white", fontWeight: "bold" }}>D</span>
