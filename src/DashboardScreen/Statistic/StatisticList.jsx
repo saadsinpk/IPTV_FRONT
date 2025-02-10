@@ -39,19 +39,23 @@ const SubMainDashboard = () => {
           title="OPEN CONNECTIONS"
           value="1,259"
           subtext="229 VOD / 3,030 LIVE"
-          bgClass="bg-blue-500"
+          className="bg-blue-500"
         />
-        <StatCard title="ONLINE USERS" value="1,220" bgClass="bg-green-500" />
+        <StatCard title="ONLINE USERS" value="1,220" className="bg-green-500" />
         <StatCard
           title="IN/OUTPUT"
           value="4,272/7,205"
-          bgClass="bg-orange-500"
+          className="bg-orange-500"
         />
-        <StatCard title="ONLINE STREAMS" value="1,147" bgClass="bg-teal-500" />
+        <StatCard
+          title="ONLINE STREAMS"
+          value="1,147"
+          className="bg-teal-500"
+        />
         <StatCard
           title="OFFLINE STREAMS / ONDEMAND"
           value="92 / 95"
-          bgClass="bg-slate-900"
+          className="bg-slate-900"
         />
       </div>
 
