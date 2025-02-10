@@ -7,7 +7,7 @@ const TopBar = ({ title }) => {
   return (
     <Header
       style={{
-        background: "#2d343c",
+        background: "#1a2129",
         color: "white",
         padding: "0 20px",
         fontSize: "20px",
@@ -16,7 +16,7 @@ const TopBar = ({ title }) => {
         alignItems: "center",
       }}
     >
-      {title}
+      {/* {title} */}
     </Header>
   );
 };

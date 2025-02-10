@@ -12,6 +12,7 @@ import { FaServer, FaUserFriends } from "react-icons/fa";
 import { Routes, useNavigate, Route, useLocation } from "react-router-dom";
 import SubMainDashboard from "../DashboardScreen/SubMainDashboard";
 import TopBar from "../components/ui/TopBar"; // Import the TopBar component
+import { IoMdMail } from "react-icons/io";
 import StatisticList from "../DashboardScreen/Statistic/StatisticList";
 
 const { Sider, Content } = Layout;
@@ -22,6 +23,11 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
   const location = useLocation();
 
   const handleNavClick = (key) => {
+    if (key === "/dashboard") {
+      navigate("/dashboard"); // Navigate to the root dashboard path
+    } else {
+      navigate(key); // Navigate to the specified path
+    }
     setSelectedKeys([key]);
   };
 
@@ -63,7 +69,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
     () => [
       {
         name: "Dashboard",
-        key: "dashboard",
+        key: "/dashboard", // Update the key to "/dashboard"
         icon: <MdWindow />,
       },
       {
@@ -120,80 +126,102 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
   );
 
   return (
-    <Layout>
-      <Sider
-        collapsed={collapsed}
-        onCollapse={toggleCollapsed}
-        style={{
-          background: "#2d343c",
-          minHeight: "100vh",
-          overflowY: "auto",
-        }}
-      >
-        <div
-          className="logo"
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        minWidth: "100vw",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <Layout>
+        <Sider
+          width={collapsed ? 60 : 250}
+          collapsed={collapsed}
+          onCollapse={toggleCollapsed}
           style={{
-            height: 60,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "white",
-            fontSize: 20,
-            fontWeight: "bold",
+            background: "#2d343c",
+            minHeight: "100vh",
+            overflowY: "auto",
           }}
         >
-          {collapsed ? "🔹" : "DASHBOARD"}
-        </div>
-        <Menu
-          theme="dark"
-          mode="inline"
-          selectedKeys={selectedKeys}
-          onClick={(e) => handleNavClick(e.key)}
-        >
-          {navItems.map((item) => {
-            if (item.subItems) {
+          <div
+            className="logo"
+            style={{
+              height: 63,
+              display: "flex",
+              alignItems: "center",
+              color: "white",
+              fontSize: 20,
+              width: "100%",
+              fontWeight: "bold",
+              backgroundColor: "#1a2129",
+              paddingLeft: "30px",
+            }}
+          >
+            {/* {collapsed ? "🔹" : getTitleFromPath(location.pathname)} */}
+            <IoMdMail color="#2d343c" size={30} />
+            &nbsp;
+            {collapsed ? "🔹" : "Dashboard"}
+          </div>
+          <Menu
+            theme="#2d343c"
+            mode="inline"
+            selectedKeys={selectedKeys}
+            onClick={(e) => handleNavClick(e.key)}
+          >
+            {navItems.map((item) => {
+              if (item.subItems) {
+                return (
+                  <Menu.SubMenu
+                    key={item.key}
+                    icon={item.icon}
+                    color="white"
+                    style={{
+                      color: "white",
+                    }}
+                    title={collapsed ? item.name.charAt(0) : item.name}
+                  >
+                    {item.subItems.map((subItem) => (
+                      <Menu.Item
+                        key={subItem.key}
+                        onClick={() => handleNavClick(subItem.key)}
+                      >
+                        {subItem.name}
+                      </Menu.Item>
+                    ))}
+                  </Menu.SubMenu>
+                );
+              }
               return (
-                <Menu.SubMenu
+                <Menu.Item
                   key={item.key}
                   icon={item.icon}
-                  title={collapsed ? item.name.charAt(0) : item.name}
+                  color="white"
+                  style={{
+                    color: "white",
+                  }}
+                  onClick={() => handleNavClick(item.key)}
                 >
-                  {item.subItems.map((subItem) => (
-                    <Menu.Item
-                      key={subItem.key}
-                      onClick={() => handleNavClick(subItem.key)}
-                    >
-                      {subItem.name}
-                    </Menu.Item>
-                  ))}
-                </Menu.SubMenu>
+                  {item.name}
+                </Menu.Item>
               );
-            }
-            return (
-              <Menu.Item
-                key={item.key}
-                icon={item.icon}
-                onClick={() => handleNavClick(item.key)}
-              >
-                {item.name}
-              </Menu.Item>
-            );
-          })}
-        </Menu>
-      </Sider>
-      <Layout>
-        <TopBar title={getTitleFromPath(location.pathname)} />{" "}
-        {/* Pass the current route title */}
-        <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
-          <Routes>
-            <Route path="/" element={<SubMainDashboard />} />
-            <Route path="statistic" element={<StatisticList />} />
-            <Route path="/" element={<SubMainDashboard />} />
-            <Route path="/" element={<SubMainDashboard />} />
-          </Routes>
-        </Content>
+            })}
+          </Menu>
+        </Sider>
+        <Layout>
+          <TopBar title={getTitleFromPath(location.pathname)} />{" "}
+          {/* Pass the current route title */}
+          <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
+            <Routes>
+              <Route path="dashboard" element={<SubMainDashboard />} />
+              <Route path="statistic" element={<StatisticList />} />
+            </Routes>
+          </Content>
+        </Layout>
       </Layout>
-    </Layout>
+    </div>
   );
 };
 
