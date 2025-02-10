@@ -291,7 +291,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
           {/* Pass the current route title */}
           <Content style={{ margin: "0", overflow: "initial" }}>
             <Routes>
-              <Route path="dashboard" element={<SubMainDashboard />} />
+              <Route path="*" element={<SubMainDashboard />} />
               <Route path="statistic" element={<StatisticList />} />
             </Routes>
           </Content>
