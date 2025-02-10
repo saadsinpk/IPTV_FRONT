@@ -1,6 +1,6 @@
 // import React, { useState, useEffect, useMemo } from "react";
 // import { Layout, Menu } from "antd";
-// import MainIcon from "../assets/BeautyParlour.png";
+// // import MainIcon from "../assets/BeautyParlour.png";
 // import { DashboardOutlined } from "@ant-design/icons";
 // import { BiSliderAlt } from "react-icons/bi";
 // import { TfiWorld } from "react-icons/tfi";
@@ -31,7 +31,7 @@
 // import { BiSolidOffer } from "react-icons/bi";
 // import { BsClipboard2Check } from "react-icons/bs";
 // import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
-
+// import SubMainDashboard from "../DashboardScreen/SubMainDashboard";
 
 // const { Sider } = Layout;
 
@@ -264,7 +264,7 @@
 //           collapsed={collapsed}
 //           onCollapse={toggleCollapsed}
 //           style={{
-//             backgroundColor: "#DADADA",
+//             backgroundColor: "#2d343c",
 //             minHeight: "100vh",
 //             overflowY: "auto",
 //           }}
@@ -279,11 +279,11 @@
 //             }}
 //             onClick={() => navItem("")}
 //           >
-//             <img src={MainIcon} alt="" width={80} height={170} />
+//             <img src="" alt="" width={80} height={170} />
 //           </div>
 //           <Menu
 //             style={{
-//               backgroundColor: "#DADADA",
+//               backgroundColor: "#2d343c",
 //               color: "#000",
 //               fontSize: "20px",
 //             }}
@@ -302,8 +302,8 @@
 //               style={{
 //                 backgroundColor: selectedKeys.includes("dashboard")
 //                   ? "#000"
-//                   : "#DADADA",
-//                 color: selectedKeys.includes("dashboard") ? "#000" : "#000",
+//                   : "#2d343c",
+//                 color: selectedKeys.includes("dashboard") ? "white" : "white",
 //               }}
 //             >
 //               {"Dashboard"}
@@ -318,10 +318,10 @@
 //                 style={{
 //                   backgroundColor: openKeys.includes(item.mainitem.key)
 //                     ? "#000" // Black background for open submenu
-//                     : "#DADADA",
+//                     : "#2d343c",
 //                   color: selectedKeys.includes(item.mainitem.key)
 //                     ? "#FFF" // White text color when submenu item is selected
-//                     : "#000",
+//                     : "white",
 //                 }}
 //               >
 //                 {/* Loop through each item (item1 to item11) and render it only if it exists */}
@@ -361,10 +361,10 @@
 //                         style={{
 //                           backgroundColor: selectedKeys.includes(subItem.key)
 //                             ? "#000" // Black background when item is selected
-//                             : "#DADADA",
+//                             : "#2d343c",
 //                           color: selectedKeys.includes(subItem.key)
 //                             ? "#FFF" // White text color when item is selected
-//                             : "#000",
+//                             : "white",
 //                           fontSize: selectedKeys.includes(subItem.key)
 //                             ? "17px"
 //                             : "17px",
@@ -390,7 +390,7 @@
 //               }
 //             />
 
-//             <Route
+//             {/* <Route
 //               path="admindetails/:id"
 //               element={
 //                 <AdminDetails
@@ -420,435 +420,7 @@
 //                   collapsed={collapsed}
 //                 />
 //               }
-//             />
-
-//             <Route
-//               path="userlist"
-//               element={
-//                 <UserList setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="userreport"
-//               element={
-//                 <UserReports
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="clientlist"
-//               element={
-//                 <ClientList setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="editclient/:id"
-//               element={
-//                 <EditClient setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="createclient"
-//               element={
-//                 <EditClient setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-
-//             <Route
-//               path="saloonlist"
-//               element={
-//                 <SaloonList setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="EditPartner"
-//               element={
-//                 <EditDetail setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-
-//             <Route
-//               path="servicelist"
-//               element={
-//                 <ServiceList
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="promolist"
-//               element={
-//                 <PromoList setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="cashbackvoucherlist"
-//               element={
-//                 <CashBackVoucher
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="createcashback"
-//               element={
-//                 <CashBack setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-
-//             <Route
-//               path="pagelist"
-//               element={
-//                 <PageList setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="editpage/:id"
-//               element={
-//                 <EditPage setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-
-//             <Route
-//               path="categorylist"
-//               element={
-//                 <CartegoryList
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="treatmentlist"
-//               element={
-//                 <TreatmentList
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="createcategory"
-//               element={
-//                 <EditCategory
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="createtreatment"
-//               element={
-//                 <EditTreatment
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="edittreatment/:id"
-//               element={
-//                 <EditTreatment
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="editCategory/:id"
-//               element={
-//                 <EditCategory
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="partnerlist"
-//               element={
-//                 <PartnerList
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="partnerdetail/:id"
-//               element={
-//                 <PartnerDetail
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="teamlist"
-//               element={
-//                 <TeamList setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="editteam/:id"
-//               element={
-//                 <EditTeam setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="createteam"
-//               element={
-//                 <EditTeam setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-
-//             <Route
-//               path="contactlist"
-//               element={
-//                 <ContactList
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="faqlist"
-//               element={
-//                 <FAQsList setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="editfaq/:id"
-//               element={
-//                 <EditFAQs setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="createfaq"
-//               element={
-//                 <EditFAQs setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-
-//             <Route
-//               path="testinomiallist"
-//               element={
-//                 <TestimonialList
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="edittestinomial/:id"
-//               element={
-//                 <EditTestinomial
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="createtestinomial"
-//               element={
-//                 <EditTestinomial
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="subscriptionlist"
-//               element={
-//                 <SubscriptionList
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="createsubscription"
-//               element={
-//                 <EditSubscription
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="sociallinkslist"
-//               element={
-//                 <SocialLinks
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="createsociallinks"
-//               element={
-//                 <EditSocialLinks
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="editsociallinks/:id"
-//               element={
-//                 <EditSocialLinks
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="applinkslist"
-//               element={
-//                 <AppLinks setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="editapplinks/:id"
-//               element={
-//                 <EditAppLinks
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="footer"
-//               element={
-//                 <Footer setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="editfooter/:id"
-//               element={
-//                 <EditFooter setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-
-//             <Route
-//               path="discover"
-//               element={
-//                 <Discover setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="creatediscover"
-//               element={
-//                 <EditDiscover
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="editdiscover/:id"
-//               element={
-//                 <EditDiscover
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="homeslider"
-//               element={
-//                 <HomeSlider setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="edithomesliderimages"
-//               element={
-//                 <EditHomeSlider
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="addhomesliderimages"
-//               element={
-//                 <EditHomeSlider
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="financialreport"
-//               element={
-//                 <FinancialReport
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="payoncash"
-//               element={
-//                 <PayOnCash setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="uberreport"
-//               element={
-//                 <UberDetail setCollapsed={setCollapsed} collapsed={collapsed} />
-//               }
-//             />
-//             <Route
-//               path="UberDeliverySummary"
-//               element={
-//                 <UberDeliverySummary
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="uberpayment"
-//               element={
-//                 <UberPayment
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-//             <Route
-//               path="totalpayments"
-//               element={
-//                 <TotalUberPayments
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
-
-//             <Route
-//               path="bookingslist"
-//               element={
-//                 <BookingsList
-//                   setCollapsed={setCollapsed}
-//                   collapsed={collapsed}
-//                 />
-//               }
-//             />
+//             /> */}
 //           </Routes>
 //         </Layout>
 //       </Layout>
@@ -858,13 +430,89 @@
 
 // export default MainDashboard;
 
+import React, { useState } from "react";
+import { Layout, Menu } from "antd";
+import {
+  DashboardOutlined,
+  UserOutlined,
+  BarChartOutlined,
+  SettingOutlined,
+  FolderOpenOutlined,
+  VideoCameraOutlined,
+  AppstoreOutlined,
+} from "@ant-design/icons";
+import { FaServer, FaUserFriends } from "react-icons/fa";
 
-import React from 'react'
+const { Sider } = Layout;
 
-const MainDashboard = () => {
+const Sidebar = ({ collapsed, toggleCollapsed }) => {
+  const [selectedKeys, setSelectedKeys] = useState(["dashboard"]);
+
+  const handleNavClick = (key) => {
+    setSelectedKeys([key]);
+  };
+
   return (
-    <div>MainDashboard</div>
-  )
-}
+    <Sider
+      collapsible
+      collapsed={collapsed}
+      onCollapse={toggleCollapsed}
+      style={{
+        background: "#2d343c",
+        minHeight: "100vh",
+        overflowY: "auto",
+      }}
+    >
+      <div
+        className="logo"
+        style={{
+          height: 60,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white",
+          fontSize: 20,
+          fontWeight: "bold",
+        }}
+      >
+        {collapsed ? "🔹" : "DASHBOARD"}
+      </div>
+      <Menu
+        theme="dark"
+        mode="inline"
+        selectedKeys={selectedKeys}
+        onClick={(e) => handleNavClick(e.key)}
+      >
+        <Menu.Item key="dashboard" icon={<DashboardOutlined />}>
+          Dashboard
+        </Menu.Item>
+        <Menu.SubMenu key="connections" icon={<FaServer />} title="Connections">
+          <Menu.Item key="connections_live">Live</Menu.Item>
+          <Menu.Item key="connections_vod">VOD</Menu.Item>
+        </Menu.SubMenu>
+        <Menu.SubMenu
+          key="users"
+          icon={<FaUserFriends />}
+          title="Users/Resellers"
+        >
+          <Menu.Item key="user_list">User List</Menu.Item>
+          <Menu.Item key="reseller_list">Reseller List</Menu.Item>
+        </Menu.SubMenu>
+        <Menu.Item key="statistics" icon={<BarChartOutlined />}>
+          Statistics
+        </Menu.Item>
+        <Menu.Item key="movies" icon={<VideoCameraOutlined />}>
+          Movies
+        </Menu.Item>
+        <Menu.Item key="series" icon={<AppstoreOutlined />}>
+          Series
+        </Menu.Item>
+        <Menu.Item key="settings" icon={<SettingOutlined />}>
+          Settings
+        </Menu.Item>
+      </Menu>
+    </Sider>
+  );
+};
 
-export default MainDashboard
+export default Sidebar;
