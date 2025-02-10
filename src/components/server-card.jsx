@@ -21,9 +21,15 @@ export function ServerCard({ server, index, isStatic = false }) {
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div className="space-y-2">
           <div className="flex justify-between">
-            <span>Connections:</span>
+            <span>Connection:</span>
             <span className="text-blue-600">
               {server?.connections || getRandomValue(100)}
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>Input Bit:</span>
+            <span className="text-blue-600">
+              {server?.inputBit || getRandomValue(500)}
             </span>
           </div>
           <div className="flex justify-between">
@@ -33,27 +39,29 @@ export function ServerCard({ server, index, isStatic = false }) {
             </span>
           </div>
           <div className="flex justify-between">
-            <span>Input BW:</span>
+            <span>Output Bit:</span>
             <span className="text-blue-600">
-              {server?.bandwidth?.in || `${getRandomValue(500)} Mbps`}
+              {server?.outputBit || getRandomValue(1000)}
             </span>
           </div>
           <div className="flex justify-between">
-            <span>Output BW:</span>
+            <span>Online Obs:</span>
             <span className="text-blue-600">
-              {server?.bandwidth?.out || `${getRandomValue(1000)} Mbps`}
+              {server?.onlineObs || getRandomValue(20)}
             </span>
           </div>
-          <div className="flex justify-between">
-            <span>Uptime:</span>
-            <span className="text-blue-600">{server?.uptime || "25d 17h"}</span>
-          </div>
-        </div>
-        <div className="space-y-2">
           <div className="flex justify-between">
             <span>Free Streams:</span>
             <span className="text-blue-600">
               {server?.streams || getRandomValue(20)}
+            </span>
+          </div>
+        </div>
+        <div className="space-y-2">
+          <div className="flex justify-between">
+            <span>Rq/s:</span>
+            <span className="text-blue-600">
+              {server?.rgs || getRandomValue(1000)}
             </span>
           </div>
           <div className="flex justify-between">
@@ -61,6 +69,10 @@ export function ServerCard({ server, index, isStatic = false }) {
             <span className="text-blue-600">
               {server?.freeCache || "90.95"}
             </span>
+          </div>
+          <div className="flex justify-between">
+            <span>Update:</span>
+            <span className="text-blue-600">{server?.uptime || "29q 17h"}</span>
           </div>
           <div className="flex justify-between">
             <span>Total Disk:</span>
