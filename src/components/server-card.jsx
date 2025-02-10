@@ -11,53 +11,57 @@ export function ServerCard({ server, index, isStatic = false }) {
   const getRandomValue = (max) => Math.floor(Math.random() * max);
 
   return (
-    <Card className={`${theme} p-4 rounded-lg relative overflow-hidden`}>
+    <Card
+      className={`${theme} bg-[#2c3637] border-none p-4 rounded-lg relative overflow-hidden`}
+    >
       <div className="flex justify-between items-center mb-3">
-        <h3 className="font-medium">{server?.name || `Server ${index + 1}`}</h3>
+        <h3 className="font-medium text-white">{server?.name || `Server ${index + 1}`}</h3>
         <div className={`${statusClass} px-2 py-0.5 rounded text-xs`}>
           {status}
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div className="space-y-2">
-          <div className="flex justify-between">
-            <span>Connection:</span>
-            <span className="text-blue-600">
-              {server?.connections || getRandomValue(100)}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span>Input Bit:</span>
-            <span className="text-blue-600">
-              {server?.inputBit || getRandomValue(500)}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span>Users:</span>
-            <span className="text-blue-600">
-              {server?.users || getRandomValue(50)}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span>Output Bit:</span>
-            <span className="text-blue-600">
-              {server?.outputBit || getRandomValue(1000)}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span>Online Obs:</span>
-            <span className="text-blue-600">
-              {server?.onlineObs || getRandomValue(20)}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span>Free Streams:</span>
-            <span className="text-blue-600">
-              {server?.streams || getRandomValue(20)}
-            </span>
+          <div className="bg-white p-3 rounded-md">
+            <div className="flex justify-between">
+              <span>Connection:</span>
+              <span className="text-blue-600">
+                {server?.connections || getRandomValue(100)}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span>Input Bit:</span>
+              <span className="text-blue-600">
+                {server?.inputBit || getRandomValue(500)}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span>Users:</span>
+              <span className="text-blue-600">
+                {server?.users || getRandomValue(50)}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span>Output Bit:</span>
+              <span className="text-blue-600">
+                {server?.outputBit || getRandomValue(1000)}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span>Online Obs:</span>
+              <span className="text-blue-600">
+                {server?.onlineObs || getRandomValue(20)}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span>Free Streams:</span>
+              <span className="text-blue-600">
+                {server?.streams || getRandomValue(20)}
+              </span>
+            </div>
           </div>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 bg-white p-3 rounded-md">
           <div className="flex justify-between">
             <span>Rq/s:</span>
             <span className="text-blue-600">
@@ -82,7 +86,7 @@ export function ServerCard({ server, index, isStatic = false }) {
           </div>
         </div>
       </div>
-      <div className="space-y-3">
+      <div className="space-y-3 bg-white p-3 rounded-md">
         <div>
           <div className="text-sm mb-1">CPU Usage</div>
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
