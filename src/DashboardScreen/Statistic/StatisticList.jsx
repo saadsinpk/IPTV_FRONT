@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const StatisticList = () => {
-  return (
-    <div>StatisticList</div>
-  )
-}
+  console.log("dsddsdsd");
 
-export default StatisticList
+  return <div>StatisticList</div>;
+};
+
+export default StatisticList;
