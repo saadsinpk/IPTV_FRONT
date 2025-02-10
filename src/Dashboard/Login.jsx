@@ -4,12 +4,14 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import Background3D from "@/components/Background3D";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [, setLocation] = useLocation();
+  const navigate = useNavigate();
 
   const formRef = useRef(null);
   const heroRef = useRef(null);
@@ -67,7 +69,8 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
+    localStorage.setItem("token", "test");
+    navigate("/dashboard");
     setTimeout(() => {
       setIsLoading(false);
       setLocation("/");
