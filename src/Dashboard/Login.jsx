@@ -70,7 +70,7 @@ export default function Login() {
     e.preventDefault();
     setIsLoading(true);
     localStorage.setItem("token", "test");
-    navigate("/dashboard/statistic");
+    navigate("/dashboard");
     setTimeout(() => {
       setIsLoading(false);
       setLocation("/");
@@ -93,11 +93,11 @@ export default function Login() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-gray-300 text-sm mb-1">
-                  Username
+                  Email
                 </label>
                 <Input
                   type="text"
-                  placeholder="Enter your username"
+                  placeholder="Enter your email"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="bg-black/50 border-white/10 text-white hover:border-blue-400/50 focus:border-blue-400 transition-colors"

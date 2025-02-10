@@ -1,12 +1,15 @@
 import React from "react";
 import { ServerCard } from "../components/server-card";
 import { StatCard } from "../components/stats-card";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 import {
   Users,
   ChartNoAxesCombined,
   ChevronRight,
   ChevronUp,
 } from "lucide-react";
+import { IoIosPeople } from "react-icons/io";
 
 const SubMainDashboard = () => {
   const dummyStats = {
@@ -46,14 +49,16 @@ const SubMainDashboard = () => {
           value1="1,259"
           value2="1,259"
           className="bg-blue-500"
-          icon={Users}
+          icon={IoIosPeople}
+          iconClass="h-35 w-35"
         />
         <StatCard
           title="ONLINE USERS"
           value1="1,220"
           value2="1,220"
           className="bg-green-500"
-          icon={ChartNoAxesCombined}
+          icon={BsGraphUpArrow}
+          iconClass="h-20 w-35"
         />
         <StatCard
           title="IN/OUTPUT"
@@ -61,6 +66,7 @@ const SubMainDashboard = () => {
           value2="4,272/7,205"
           className="bg-orange-500"
           icon={ChevronRight}
+          iconClass="h-35 w-35"
         />
         <StatCard
           title="ONLINE STREAMS"
@@ -68,13 +74,15 @@ const SubMainDashboard = () => {
           value2="1,147"
           className="bg-teal-500"
           icon={ChevronRight}
+          iconClass="h-35 w-35"
         />
         <StatCard
           title="OFFLINE STREAMS / ONDEMAND"
           value1="92 / 95"
           value2="92 / 95"
           className="bg-slate-900"
-          icon={ChevronUp}
+          icon={FaArrowAltCircleUp}
+          iconClass="h-35 w-25"
         />
       </div>
 
