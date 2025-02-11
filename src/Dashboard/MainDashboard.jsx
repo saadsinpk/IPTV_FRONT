@@ -107,7 +107,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
           { name: "Current", key: "/dashboard/connections_current" },
           {
             name: "Current Connection ISP",
-            key: "/dashboard/current_connection_isp",
+            key: "/dashboard/connections_current_connection_isp",
           },
           { name: "Map", key: "/dashboard/connections_map" },
           { name: "History", key: "/dashboard/connections_history" },
@@ -154,13 +154,13 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
         icon: <AppstoreOutlined />,
       },
       {
-        name: "TranscodeProfiles",
-        key: "/dashboard/transcodeprofiles",
+        name: "Transcode Profiles",
+        key: "/dashboard/transcode_profiles",
         icon: <AppstoreOutlined />,
       },
       {
-        name: "CreatedChannel",
-        key: "/dashboard/createdchannel",
+        name: "Created Channel",
+        key: "/dashboard/created_channel",
         icon: <AppstoreOutlined />,
       },
       {
@@ -169,8 +169,8 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
         icon: <AppstoreOutlined />,
       },
       {
-        name: "FolderWatch",
-        key: "/dashboard/folderwatch",
+        name: "Folder Watch",
+        key: "/dashboard/folder_watch",
         icon: <AppstoreOutlined />,
       },
       {
@@ -187,11 +187,151 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
         name: "Lines",
         key: "/dashboard/lines",
         icon: <AppstoreOutlined />,
+        subItems: [
+          { name: "User", key: "/dashboard/lines_user" },
+          {
+            name: "MAG",
+            key: "/dashboard/lines_mag",
+          },
+          { name: "XtreamTV", key: "/dashboard/lines_xtreamtv" },
+        ],
+      },
+      {
+        name: "Packages",
+        key: "/dashboard/Packages",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Stats",
+        key: "/dashboard/stats",
+        icon: <AppstoreOutlined />,
+        subItems: [
+          { name: "Streams", key: "/dashboard/stats_streams" },
+          { name: "Line usage", key: "/dashboard/stats_line_usage" },
+          { name: "MAG Leaks(ISP)", key: "/dashboard/stats_mag_leaks_isp" },
+          { name: "DNS Finder", key: "/dashboard/stats_dns_finder" },
+          {
+            name: "User Agent History",
+            key: "/dashboard/stats_user_agent_history",
+          },
+          { name: "User Agent", key: "/dashboard/stats_user_agent" },
+          { name: "Compromized", key: "/dashboard/stats_compromized" },
+          {
+            name: "Match-username-password",
+            key: "/dashboard/stats_match_username_password",
+          },
+          { name: "Dangerous Ips", key: "/dashboard/stats_dangerous_ips" },
+          {
+            name: "Diff ISP Detection",
+            key: "/dashboard/stats_diff_isp_detection",
+          },
+          { name: "Proxy Detection", key: "/dashboard/stats_proxy_detection" },
+          { name: "Top50", key: "/dashboard/stats_top50" },
+          {
+            name: "Top 50 online DNS",
+            key: "/dashboard/stats_stats_Top_50_online_dns",
+          },
+          {
+            name: "Top 50 offline DNS",
+            key: "/dashboard/stats_Top_50_offline_dns",
+          },
+          { name: "Top ASN/ISP", key: "/dashboard/stats_Top_asn_isp" },
+          {
+            name: "Search History IP",
+            key: "/dashboard/stats_search_history_ip",
+          },
+          {
+            name: "Top 50 active DNS",
+            key: "/dashboard/stats_Top_50_active_dns",
+          },
+        ],
+      },
+      {
+        name: "Logs",
+        key: "/dashboard/logs",
+        icon: <AppstoreOutlined />,
+        subItems: [
+          { name: "Credits", key: "/dashboard/logs_credits" },
+          { name: "Streams", key: "/dashboard/logs_streams" },
+          { name: "Activity", key: "/dashboard/logs_activity" },
+          { name: "Pannel Error", key: "/dashboard/logs_pannel_error" },
+          { name: "Client Request", key: "/dashboard/logs_client_request" },
+          { name: "Login Logs", key: "/dashboard/logs_login_logs" },
+        ],
+      },
+      {
+        name: "Tools",
+        key: "/dashboard/tools",
+        icon: <AppstoreOutlined />,
+        subItems: [
+          { name: "Tools Menu", key: "/dashboard/tools_tools_menu" },
+          {
+            name: "ISP Whitelist/Block List",
+            key: "/dashboard/tools_isp_whitelist_block_list",
+          },
+          {
+            name: "ASN Whitelist/Block List",
+            key: "/dashboard/tools_asn_whitelist_block_list",
+          },
+          {
+            name: "Block User Agent",
+            key: "/dashboard/tools_block_user_agent",
+          },
+          { name: "Block IP / CIDR", key: "/dashboard/tools_block_ip_cidr" },
+          { name: "RTMP ips", key: "/dashboard/tools_rtmp_ips" },
+          { name: "Movie Dplicated", key: "/dashboard/tools_movie_dplicated" },
+          {
+            name: "Serie Duplicated",
+            key: "/dashboard/tools_serie_duplicated",
+          },
+          { name: "Channel Order", key: "/dashboard/tools_channel_order" },
+        ],
+      },
+      {
+        name: "Announcement",
+        key: "/dashboard/announcement",
+        icon: <AppstoreOutlined />,
       },
       {
         name: "Settings",
         key: "/dashboard/settings",
-        icon: <SettingOutlined />,
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "FAQ",
+        key: "/dashboard/faq",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "ChangeLog",
+        key: "/dashboard/change_log",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Payment",
+        key: "/dashboard/payment",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        name: "Server Manager",
+        key: "/dashboard/server_managers",
+        icon: <AppstoreOutlined />,
+        subItems: [
+          { name: "Servers", key: "/dashboard/server_managers_servers" },
+          { name: "Backup", key: "/dashboard/server_managers_backup" },
+          {
+            name: "Database Cons",
+            key: "/dashboard/server_managers_database_cons",
+          },
+          {
+            name: "Server Stats",
+            key: "/dashboard/server_managers_server_stats",
+          },
+          {
+            name: "Manage Proxy's",
+            key: "/dashboard/server_managers_manage_proxys",
+          },
+        ],
       },
       {
         name: "LogOut",
