@@ -105,21 +105,27 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
         icon: <FaServer />,
         subItems: [
           { name: "Current", key: "/dashboard/connections_current" },
-          { name: "VOD", key: "/dashboard/connections_vod" },
+          {
+            name: "Current Connection ISP",
+            key: "/dashboard/current_connection_isp",
+          },
+          { name: "Map", key: "/dashboard/connections_map" },
+          { name: "History", key: "/dashboard/connections_history" },
         ],
       },
       {
-        name: "Users/Resellers",
-        key: "/dashboard/users",
+        name: "Helpdesk",
+        key: "/dashboard/helpdesk",
         icon: <FaUserFriends />,
-        subItems: [
-          { name: "User List", key: "/dashboard/user_list" },
-          { name: "Reseller List", key: "/dashboard/reseller_list" },
-        ],
       },
       {
-        name: "Statistics",
-        key: "/dashboard/statistics",
+        name: "Users / Reseller",
+        key: "/dashboard/users_reseller",
+        icon: <BarChartOutlined />,
+      },
+      {
+        name: "Streams",
+        key: "/dashboard/streams",
         icon: <BarChartOutlined />,
       },
       {
@@ -133,8 +139,8 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
         icon: <AppstoreOutlined />,
       },
       {
-        name: "Autobook",
-        key: "/dashboard/autobook",
+        name: "Audiobook",
+        key: "/dashboard/audiobook",
         icon: <AppstoreOutlined />,
       },
       {
