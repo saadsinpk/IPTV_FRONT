@@ -1,6 +1,6 @@
 import React from "react";
-import { ServerCard } from "../components/server-card";
-import { StatCard } from "../components/stats-card";
+import { ServerCard } from "@/components/server-card";
+import { StatCard } from "@/components/stats-card";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import {
