@@ -7,6 +7,13 @@ import {
   VideoCameraOutlined,
   AppstoreOutlined,
 } from "@ant-design/icons";
+import { MdOutlineLogout } from "react-icons/md";
+import { FiLogIn } from "react-icons/fi";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { FaCirclePlay } from "react-icons/fa6";
+import { LiaSignalSolid } from "react-icons/lia";
+import { FaCube } from "react-icons/fa6";
+import { BsFilm } from "react-icons/bs";
 import { MdWindow } from "react-icons/md";
 import { FaServer, FaUserFriends } from "react-icons/fa";
 import { Routes, useNavigate, Route, useLocation } from "react-router-dom";
@@ -116,17 +123,17 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       {
         name: "Helpdesk",
         key: "/dashboard/helpdesk",
-        icon: <FaUserFriends />,
+        icon: <FiLogIn />,
       },
       {
         name: "Users / Reseller",
         key: "/dashboard/users_reseller",
-        icon: <BarChartOutlined />,
+        icon: <BsFillPeopleFill />,
       },
       {
         name: "Streams",
         key: "/dashboard/streams",
-        icon: <BarChartOutlined />,
+        icon: <FaCirclePlay />,
       },
       {
         name: "Movies",
@@ -136,57 +143,57 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       {
         name: "Series",
         key: "/dashboard/series",
-        icon: <AppstoreOutlined />,
+        icon: <BsFilm />,
       },
       {
         name: "Audiobook",
         key: "/dashboard/audiobook",
-        icon: <AppstoreOutlined />,
+        icon: <VideoCameraOutlined />,
       },
       {
         name: "Bouquets",
         key: "/dashboard/bouquets",
-        icon: <AppstoreOutlined />,
+        icon: <BsFilm />,
       },
       {
         name: "Providers",
         key: "/dashboard/providers",
-        icon: <AppstoreOutlined />,
+        icon: <BsFilm />,
       },
       {
         name: "Transcode Profiles",
         key: "/dashboard/transcode_profiles",
-        icon: <AppstoreOutlined />,
+        icon: <BsFilm />,
       },
       {
         name: "Created Channel",
         key: "/dashboard/created_channel",
-        icon: <AppstoreOutlined />,
+        icon: <BsFilm />,
       },
       {
         name: "Radio",
         key: "/dashboard/radio",
-        icon: <AppstoreOutlined />,
+        icon: <FaCirclePlay />,
       },
       {
         name: "Folder Watch",
         key: "/dashboard/folder_watch",
-        icon: <AppstoreOutlined />,
+        icon: <FaCirclePlay />,
       },
       {
         name: "EPG",
         key: "/dashboard/epg",
-        icon: <AppstoreOutlined />,
+        icon: <FaCirclePlay />,
       },
       {
         name: "Archive",
         key: "/dashboard/archive",
-        icon: <AppstoreOutlined />,
+        icon: <FaCirclePlay />,
       },
       {
         name: "Lines",
         key: "/dashboard/lines",
-        icon: <AppstoreOutlined />,
+        icon: <FiLogIn />,
         subItems: [
           { name: "User", key: "/dashboard/lines_user" },
           {
@@ -199,12 +206,12 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       {
         name: "Packages",
         key: "/dashboard/Packages",
-        icon: <AppstoreOutlined />,
+        icon: <FaCube />,
       },
       {
         name: "Stats",
         key: "/dashboard/stats",
-        icon: <AppstoreOutlined />,
+        icon: <FiLogIn />,
         subItems: [
           { name: "Streams", key: "/dashboard/stats_streams" },
           { name: "Line usage", key: "/dashboard/stats_line_usage" },
@@ -249,7 +256,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       {
         name: "Logs",
         key: "/dashboard/logs",
-        icon: <AppstoreOutlined />,
+        icon: <FaServer />,
         subItems: [
           { name: "Credits", key: "/dashboard/logs_credits" },
           { name: "Streams", key: "/dashboard/logs_streams" },
@@ -262,7 +269,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       {
         name: "Tools",
         key: "/dashboard/tools",
-        icon: <AppstoreOutlined />,
+        icon: <LiaSignalSolid />,
         subItems: [
           { name: "Tools Menu", key: "/dashboard/tools_tools_menu" },
           {
@@ -290,32 +297,32 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       {
         name: "Announcement",
         key: "/dashboard/announcement",
-        icon: <AppstoreOutlined />,
+        icon: <SettingOutlined />,
       },
       {
         name: "Settings",
         key: "/dashboard/settings",
-        icon: <AppstoreOutlined />,
+        icon: <SettingOutlined />,
       },
       {
         name: "FAQ",
         key: "/dashboard/faq",
-        icon: <AppstoreOutlined />,
+        icon: <SettingOutlined />,
       },
       {
         name: "ChangeLog",
         key: "/dashboard/change_log",
-        icon: <AppstoreOutlined />,
+        icon: <SettingOutlined />,
       },
       {
         name: "Payment",
         key: "/dashboard/payment",
-        icon: <AppstoreOutlined />,
+        icon: <SettingOutlined />,
       },
       {
         name: "Server Manager",
         key: "/dashboard/server_managers",
-        icon: <AppstoreOutlined />,
+        icon: <LiaSignalSolid />,
         subItems: [
           { name: "Servers", key: "/dashboard/server_managers_servers" },
           { name: "Backup", key: "/dashboard/server_managers_backup" },
@@ -336,7 +343,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       {
         name: "LogOut",
         key: "logout",
-        icon: <SettingOutlined />,
+        icon: <MdOutlineLogout />,
         onClick: handleLogout,
       },
     ],
@@ -355,7 +362,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
     >
       <Layout>
         <Sider
-          width={collapsed ? 60 : 250}
+          width={collapsed ? 60 : 220}
           collapsed={collapsed}
           onCollapse={toggleCollapsed}
           style={{
@@ -393,6 +400,9 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
                 handleNavClick(e.key);
               }
             }}
+            style={{
+              fontSize: "13px",
+            }}
           >
             {navItems.map((item) => {
               if (item.subItems) {
@@ -403,6 +413,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
                     color="white"
                     style={{
                       color: "white",
+                      fontSize: "13px",
                     }}
                     title={collapsed ? item.name.charAt(0) : item.name}
                   >
