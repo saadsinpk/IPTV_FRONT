@@ -22,6 +22,8 @@ import TopBar from "../components/ui/TopBar"; // Import the TopBar component
 import { IoMdMail } from "react-icons/io";
 import StatisticList from "../DashboardScreen/Statistic/StatisticList";
 import CurrentPage from "../DashboardScreen/Connections/Current";
+import CurrentConnectionISP from "../DashboardScreen/Connections/CurrentConnectionISP";
+import History from "../DashboardScreen/Connections/History";
 
 const { Sider, Content } = Layout;
 
@@ -452,6 +454,11 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               <Route path="*" element={<SubMainDashboard />} />
               <Route path="statistic" element={<StatisticList />} />
               <Route path="connections_current" element={<CurrentPage />} />
+              <Route
+                path="connections_current_connection_isp"
+                element={<CurrentConnectionISP />}
+              />
+              <Route path="connections_history" element={<History />} />
             </Routes>
           </Content>
         </Layout>
