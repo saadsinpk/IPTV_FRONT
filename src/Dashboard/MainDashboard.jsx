@@ -14,6 +14,7 @@ import SubMainDashboard from "../DashboardScreen/SubMainDashboard";
 import TopBar from "../components/ui/TopBar"; // Import the TopBar component
 import { IoMdMail } from "react-icons/io";
 import StatisticList from "../DashboardScreen/Statistic/StatisticList";
+import CurrentPage from "../DashboardScreen/Connections/Current";
 
 const { Sider, Content } = Layout;
 
@@ -103,7 +104,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
         key: "/dashboard/connections",
         icon: <FaServer />,
         subItems: [
-          { name: "Live", key: "/dashboard/connections_live" },
+          { name: "Current", key: "/dashboard/connections_current" },
           { name: "VOD", key: "/dashboard/connections_vod" },
         ],
       },
@@ -293,6 +294,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
             <Routes>
               <Route path="*" element={<SubMainDashboard />} />
               <Route path="statistic" element={<StatisticList />} />
+              <Route path="connections_current" element={<CurrentPage />} />
             </Routes>
           </Content>
         </Layout>
