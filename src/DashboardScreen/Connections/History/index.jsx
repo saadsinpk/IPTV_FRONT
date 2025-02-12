@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import DateComponentFromTo from "@/components/ui/DateComponentFromTo";
 import SearchComponent from "@/components/ui/SearchComponent";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/ui/input";
 import DynamicTable from "@/components/ui/tablewithentries";
 
 const History = () => {
