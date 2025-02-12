@@ -7,7 +7,7 @@ import {
   PaginationLink,
   PaginationPrevious,
   PaginationNext,
-} from "../../../components/ui/pagination";
+} from "@/components/ui/pagination";
 import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import CurrentConnectionISPTable from "@/components/CurrentConnectionISPTable";
 

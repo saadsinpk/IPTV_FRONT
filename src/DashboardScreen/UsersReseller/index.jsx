@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Box, Paper } from "@mui/material";
 import SearchComponent from "@/components/ui/SearchComponent";
-import DynamicTable from "../../components/ui/tablewithentries";
-import UniversalButton from "../../components/ui/UniversalButton";
+import DynamicTable from "@/components/ui/tablewithentries";
+import UniversalButton from "@/components/ui/UniversalButton";
 
 function UsersReseller() {
   const [searchValue, setSearchValue] = useState("");

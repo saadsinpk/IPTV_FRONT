@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CurrentTable from "../../../components/CurrentTable";
+import CurrentTable from "@/components/CurrentTable";
 import {
   PaginationEllipsis,
   Pagination,
@@ -8,7 +8,7 @@ import {
   PaginationLink,
   PaginationPrevious,
   PaginationNext,
-} from "../../../components/ui/pagination";
+} from "@/components/ui/pagination";
 import {
   Select,
   MenuItem,
@@ -16,8 +16,8 @@ import {
   FormControl,
   Paper,
 } from "@mui/material";
-import DynamicTable from "../../../components/ui/tablewithentries";
-import UniversalButton from "../../../components/ui/UniversalButton";
+import DynamicTable from "@/components/ui/tablewithentries";
+import UniversalButton from "@/components/ui/UniversalButton";
 
 // Sample country and server data for the dropdowns
 const countries = ["USA", "Canada", "UK", "Australia"];

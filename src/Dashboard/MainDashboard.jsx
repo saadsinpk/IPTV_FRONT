@@ -18,7 +18,7 @@ import { MdWindow } from "react-icons/md";
 import { FaServer, FaUserFriends } from "react-icons/fa";
 import { Routes, useNavigate, Route, useLocation } from "react-router-dom";
 import SubMainDashboard from "../DashboardScreen/SubMainDashboard";
-import TopBar from "../components/ui/TopBar"; // Import the TopBar component
+import TopBar from "@/components/ui/TopBar"; // Import the TopBar component
 import { IoMdMail } from "react-icons/io";
 import StatisticList from "../DashboardScreen/Statistic/StatisticList";
 import CurrentPage from "../DashboardScreen/Connections/Current";
