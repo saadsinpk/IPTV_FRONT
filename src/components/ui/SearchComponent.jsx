@@ -35,6 +35,8 @@ const SearchComponent = ({
         }}
         fullWidth
         sx={{
+          background: "white",
+          color: "black",
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
               borderColor: "black", // default border color

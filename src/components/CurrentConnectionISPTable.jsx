@@ -9,8 +9,6 @@ import {
   Paper,
   Button,
 } from "@mui/material";
-import LinearProgress from "@mui/material/LinearProgress";
-import Flag from "react-world-flags";
 
 const data = [
   {

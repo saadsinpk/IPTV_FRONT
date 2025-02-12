@@ -25,7 +25,22 @@ function DateComponentFromTo({ width, onDatechange, startDate, setStartDate }) {
             onDatechange("startDate", e.target.value);
           }}
           fullWidth
-          sx={{ flex: 1 }}
+          sx={{
+            flex: 1,
+            background: "white",
+            color: "black",
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "black", // default border color
+              },
+              "&:hover fieldset": {
+                borderColor: "black", // hover border color
+              },
+              "&.Mui-focused fieldset": {
+                borderColor: "black", // focused border color
+              },
+            },
+          }}
         />
       </Grid>
       <Grid item xs={12} sm={6}>
@@ -39,7 +54,22 @@ function DateComponentFromTo({ width, onDatechange, startDate, setStartDate }) {
             setEndDate(e.target.value);
           }}
           fullWidth
-          sx={{ flex: 1 }}
+          sx={{
+            flex: 1,
+            background: "white",
+            color: "black",
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "black", // default border color
+              },
+              "&:hover fieldset": {
+                borderColor: "black", // hover border color
+              },
+              "&.Mui-focused fieldset": {
+                borderColor: "black", // focused border color
+              },
+            },
+          }}
         />
       </Grid>
     </Grid>

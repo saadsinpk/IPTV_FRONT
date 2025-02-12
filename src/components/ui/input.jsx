@@ -8,7 +8,7 @@ const Input = React.forwardRef(
         <input
           type={type}
           className={cn(
-            "w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out",
+            "w-full p-3 border rounded-md focus:outline-none focus:ring-2 bg-white text-black transition duration-300 ease-in-out",
             error ? "border-red-500" : "border-gray-300",
             className
           )}

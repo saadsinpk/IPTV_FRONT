@@ -12,28 +12,6 @@ import {
 import LinearProgress from "@mui/material/LinearProgress";
 import Flag from "react-world-flags";
 
-const data = [
-  {
-    server: "AMERIKA 24 TB",
-    serverId: 105,
-    username: "hakankesici",
-    channel: "TR: CNN TURK HD",
-    speed: 70,
-    ip: "85.96.50.177",
-    flag: "tr",
-    userAgent: "9XtreamPlayer LibVLC/3.0.18",
-    start: "08:21:04 11/02/2025",
-    total: "38m 55s",
-    type: "ts_live",
-    owner: "Korneriptv",
-    restreamer: "NO",
-    isp: "Turk Telekomunikasyon A.S",
-    host: "vkfzggyf.3651923.xyz:8880",
-    asn: 47331,
-  },
-  // More rows can be added here
-];
-
 const CurrentTable = () => {
   return (
     <TableContainer
