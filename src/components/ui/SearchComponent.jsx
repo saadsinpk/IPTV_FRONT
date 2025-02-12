@@ -21,7 +21,6 @@ const SearchComponent = ({
   return (
     <div className="gap-3" style={{ display: "flex" }}>
       <TextField
-        variant="outlined"
         placeholder={placeHolder}
         id="search-input"
         value={searchTerm}

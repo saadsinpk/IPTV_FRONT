@@ -3,6 +3,7 @@ import { Box, Paper } from "@mui/material";
 import SearchComponent from "@/components/ui/SearchComponent";
 import DynamicTable from "@/components/ui/tablewithentries";
 import UniversalButton from "@/components/ui/UniversalButton";
+import { useNavigate } from "react-router-dom";
 
 function UsersReseller() {
   const [searchValue, setSearchValue] = useState("");
@@ -45,6 +46,7 @@ function UsersReseller() {
       },
     },
   ];
+  const navigate = useNavigate();
 
   const tableData = [
     {
@@ -104,6 +106,14 @@ function UsersReseller() {
           width: "98%",
         }}
       >
+        <UniversalButton
+          onClick={() => navigate("/dashboard/users_create")}
+          height={"55px"}
+          children="Create User"
+        />
+        <UniversalButton height={"55px"} children="GROUP MANAGEMENT" />
+        <UniversalButton height={"55px"} children="ENABLE LOGIN ALL" />
+        <UniversalButton height={"55px"} children="DISABLE LOGIN ALL" />
         <SearchComponent
           placeHolder="Search Username"
           setSearchTerm={setSearchValue}

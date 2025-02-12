@@ -26,6 +26,7 @@ import CurrentConnectionISP from "../DashboardScreen/Connections/CurrentConnecti
 import History from "../DashboardScreen/Connections/History";
 import Helpdesk from "../DashboardScreen/Helpdesk";
 import UsersReseller from "../DashboardScreen/UsersReseller";
+import UserCreate from "../DashboardScreen/UsersReseller/UserCreate";
 
 const { Sider, Content } = Layout;
 
@@ -463,6 +464,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               <Route path="connections_history" element={<History />} />
               <Route path="helpdesk" element={<Helpdesk />} />
               <Route path="users_reseller" element={<UsersReseller />} />
+              <Route path="users_create" element={<UserCreate />} />
             </Routes>
           </Content>
         </Layout>

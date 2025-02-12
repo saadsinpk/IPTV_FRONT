@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 const UniversalButton = ({
   disabled = false,
   backgroundColor,
+  height,
   color,
   onClick,
   children,
@@ -17,6 +18,7 @@ const UniversalButton = ({
       sx={{
         backgroundColor: backgroundColor || "#6c757d",
         color: color || "#FFFFFF",
+        height: height,
         marginRight: "5px",
         width: width,
         marginBottom: "5px",
