@@ -5,8 +5,15 @@ import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import Background3D from "@/components/Background3D";
 import { useNavigate } from "react-router-dom";
+import { useAddLoginMutation } from "../Redux/apiSlice";
+import { useDispatch } from "react-redux";
+import { ErrorToaster, SuccessToaster } from "../components/ui/toaster";
+import { setUser } from "../Redux/auth/authSlice";
 
 export default function Login() {
+  const [addLogin] = useAddLoginMutation();
+  const dispatch = useDispatch();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -75,6 +82,30 @@ export default function Login() {
       setIsLoading(false);
       setLocation("/");
     }, 1000);
+    try {
+      const response = await addLogin({ username, password });
+      console.log(response.data);
+
+      if (response?.data?.success) {
+        SuccessToaster("Successfully Login");
+        console.log("sddsds");
+        dispatch(
+          setUser({
+            token: response?.data?.data?.token,
+            user: response?.data?.data?.admin,
+            application: "IPTV Application",
+          })
+        );
+        setIsLoading(false);
+
+        // navigate("/dashboard");
+      } else {
+        ErrorToaster("Invalid Credentials");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      ErrorToaster("Invalid Credentials");
+    }
   };
 
   return (

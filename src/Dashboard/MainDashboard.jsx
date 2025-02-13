@@ -29,10 +29,14 @@ import UsersReseller from "../DashboardScreen/UsersReseller";
 import UserCreate from "../DashboardScreen/UsersReseller/UserCreate";
 import Groups from "../DashboardScreen/UsersReseller/Groups";
 import GroupCreate from "../DashboardScreen/UsersReseller/Groups/GroupCreate";
+import { useDispatch } from "react-redux";
+import { clearUser } from "../Redux/auth/authSlice";
 
 const { Sider, Content } = Layout;
 
 const Sidebar = ({ collapsed, toggleCollapsed }) => {
+  const dispatch = useDispatch();
+
   const [selectedKeys, setSelectedKeys] = useState(["dashboard"]);
   const navigate = useNavigate();
   const location = useLocation();
@@ -48,7 +52,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
 
   const handleLogout = () => {
     console.log("logut karo");
-    localStorage.removeItem("token");
+    dispatch(clearUser());
     navigate("/");
   };
 
