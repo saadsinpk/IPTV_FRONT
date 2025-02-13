@@ -5,7 +5,7 @@ import DynamicTable from "@/components/ui/tablewithentries";
 import UniversalButton from "@/components/ui/UniversalButton";
 import { useNavigate } from "react-router-dom";
 
-function UsersReseller() {
+function Groups() {
   const [searchValue, setSearchValue] = useState("");
 
   // Sample data for the table with the new structure
@@ -52,34 +52,17 @@ function UsersReseller() {
     {
       id: "001",
       name: "Server 1",
-      credits: "100",
-      lines: "10",
-      mag: "5",
-      enigma2: "Yes",
-      totalActive: "50",
-      totalInactive: "10",
-      dns: "192.168.1.1",
-      group: "Group A",
-      owner: "Owner 1",
-      lastLogin: "2025-02-10",
+      type: "Group A",
+    },
+    {
+      id: "002",
+      name: "Server 2",
+      type: "Group B",
     },
   ];
 
-  // Table headers
-  const headers = [
-    "id",
-    "name",
-    "credits",
-    "lines",
-    "mag",
-    "enigma2",
-    "totalActive",
-    "totalInactive",
-    "dns",
-    "group",
-    "owner",
-    "lastLogin",
-  ];
+  // Table headers (Only 4 columns)
+  const headers = ["id", "name", "type"];
 
   // Table actions
   const actions = [
@@ -107,18 +90,10 @@ function UsersReseller() {
         }}
       >
         <UniversalButton
-          onClick={() => navigate("/dashboard/create_users")}
+          onClick={() => navigate("/dashboard/create_group")}
           height={"55px"}
-          children="Create User"
+          children="Create Group"
         />
-
-        <UniversalButton
-          onClick={() => navigate("/dashboard/groups")}
-          height={"55px"}
-          children="GROUP MANAGEMENT"
-        />
-        <UniversalButton height={"55px"} children="ENABLE LOGIN ALL" />
-        <UniversalButton height={"55px"} children="DISABLE LOGIN ALL" />
         <SearchComponent
           placeHolder="Search Username"
           setSearchTerm={setSearchValue}
@@ -139,4 +114,4 @@ function UsersReseller() {
   );
 }
 
-export default UsersReseller;
+export default Groups;

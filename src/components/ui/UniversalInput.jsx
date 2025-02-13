@@ -67,7 +67,7 @@ const UniversalInput = ({
             multiline
             rows={4}
             variant="outlined"
-            sx={{ marginBottom: "5px" }}
+            sx={{ marginBottom: "5px", background: "white" }}
             error={!disabled && !!errors?.[name]}
           />
         ) : (
@@ -89,6 +89,7 @@ const UniversalInput = ({
             label={label}
             sx={{
               marginBottom: "5px",
+              background: "white",
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
                   borderColor:

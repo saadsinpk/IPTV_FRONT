@@ -27,6 +27,8 @@ import History from "../DashboardScreen/Connections/History";
 import Helpdesk from "../DashboardScreen/Helpdesk";
 import UsersReseller from "../DashboardScreen/UsersReseller";
 import UserCreate from "../DashboardScreen/UsersReseller/UserCreate";
+import Groups from "../DashboardScreen/UsersReseller/Groups";
+import GroupCreate from "../DashboardScreen/UsersReseller/Groups/GroupCreate";
 
 const { Sider, Content } = Layout;
 
@@ -406,7 +408,9 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               }
             }}
             style={{
+              overflow: "auto",
               fontSize: "13px",
+              height: "100vh",
             }}
           >
             {navItems.map((item) => {
@@ -464,7 +468,9 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               <Route path="connections_history" element={<History />} />
               <Route path="helpdesk" element={<Helpdesk />} />
               <Route path="users_reseller" element={<UsersReseller />} />
-              <Route path="users_create" element={<UserCreate />} />
+              <Route path="create_users" element={<UserCreate />} />
+              <Route path="groups" element={<Groups />} />
+              <Route path="create_group" element={<GroupCreate />} />
             </Routes>
           </Content>
         </Layout>

@@ -71,7 +71,7 @@ const DynamicTable = ({ headers, data, actions, entriesBtn }) => {
                   </TableCell>
                 ))}
                 {actions && (
-                  <TableCell>
+                  <TableCell sx={{ textAlign: "center" }}>
                     {actions.map((item, index) => (
                       <span
                         key={index}
