@@ -3,3 +3,10 @@
 body {
   overflow-x: hidden;
 }
+
+.css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
+  height: 56px;
+}
+#UniversalSelectSearching .css-1kfabtt-MuiFormLabel-root-MuiInputLabel-root {
+  top: 7px;
+}

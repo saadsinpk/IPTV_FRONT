@@ -63,11 +63,30 @@ const DynamicTable = ({ headers, data, actions, entriesBtn }) => {
               <TableRow key={rowIndex} className="hover:bg-gray-100">
                 {headers.map((header, colIndex) => (
                   <TableCell
+                    key={colIndex}
                     className="text-center"
                     sx={{ textAlign: "center !important" }}
-                    key={colIndex}
                   >
-                    {row[header]}
+                    {header === "info" ? (
+                      <div className="flex flex-wrap gap-1 justify-center">
+                        {row.info?.map((info, i) => (
+                          <span
+                            key={i}
+                            className={`px-2 py-1 text-white rounded ${
+                              info.color === "yellow"
+                                ? "bg-yellow-400"
+                                : "bg-blue-500"
+                            }`}
+                          >
+                            {info.icon
+                              ? `${info.icon} ${info.value}`
+                              : `${info.label}: ${info.value}`}
+                          </span>
+                        ))}
+                      </div>
+                    ) : (
+                      row[header]
+                    )}
                   </TableCell>
                 ))}
                 {actions && (
@@ -76,11 +95,9 @@ const DynamicTable = ({ headers, data, actions, entriesBtn }) => {
                       <span
                         key={index}
                         onClick={() => item?.handler && item.handler(row)}
-                        className="cursor-pointer text-center"
+                        className="cursor-pointer text-center mx-1"
                       >
-                        {typeof item.icon === "function"
-                          ? item.icon(row)
-                          : item.icon}
+                        {item.icon}
                       </span>
                     ))}
                   </TableCell>

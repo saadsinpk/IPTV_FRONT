@@ -31,6 +31,8 @@ import Groups from "../DashboardScreen/UsersReseller/Groups";
 import GroupCreate from "../DashboardScreen/UsersReseller/Groups/GroupCreate";
 import { useDispatch } from "react-redux";
 import { clearUser } from "../Redux/auth/authSlice";
+import Streams from "../DashboardScreen/Stream";
+import Category from "../DashboardScreen/Stream/Categories";
 
 const { Sider, Content } = Layout;
 
@@ -475,6 +477,8 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               <Route path="create_users" element={<UserCreate />} />
               <Route path="groups" element={<Groups />} />
               <Route path="create_group" element={<GroupCreate />} />
+              <Route path="streams" element={<Streams />} />
+              <Route path="category" element={<Category />} />
             </Routes>
           </Content>
         </Layout>
