@@ -4,9 +4,9 @@ import SearchComponent from "@/components/ui/SearchComponent";
 import DynamicTable from "@/components/ui/tablewithentries";
 import UniversalButton from "@/components/ui/UniversalButton";
 import { useNavigate } from "react-router-dom";
-import UniversalAutocomplete from "../../components/ui/UniversalAutocompleteSelect";
-import UniversalSelectMulti from "../../components/ui/UniversalSelectMulti";
-import UniversalSelectSearching from "../../components/ui/UniversalSelectSearching";
+import UniversalAutocomplete from "@/components/ui/UniversalAutocompleteSelect";
+import UniversalSelectMulti from "@/components/ui/UniversalSelectMulti";
+import UniversalSelectSearching from "@/components/ui/UniversalSelectSearching";
 
 function Streams() {
   const [searchValue, setSearchValue] = useState("");
