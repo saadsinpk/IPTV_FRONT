@@ -34,6 +34,8 @@ import { clearUser } from "../Redux/auth/authSlice";
 import Streams from "../DashboardScreen/Stream";
 import Category from "../DashboardScreen/Stream/Categories";
 import CategoryCreate from "../DashboardScreen/Stream/Categories/CategoryCreate";
+import Movies from "../DashboardScreen/Movies";
+import Series from "../DashboardScreen/Movies/Series";
 
 const { Sider, Content } = Layout;
 
@@ -151,7 +153,7 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
       },
       {
         name: "Movies",
-        key: "/dashboard/movies",
+        key: "/dashboard/movie",
         icon: <VideoCameraOutlined />,
       },
       {
@@ -481,6 +483,8 @@ const Sidebar = ({ collapsed, toggleCollapsed }) => {
               <Route path="streams" element={<Streams />} />
               <Route path="category" element={<Category />} />
               <Route path="create_category" element={<CategoryCreate />} />
+              <Route path="movie" element={<Movies />} />
+              <Route path="series" element={<Series />} />
             </Routes>
           </Content>
         </Layout>
